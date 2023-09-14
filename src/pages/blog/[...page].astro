@@ -14,7 +14,6 @@ const page = await getEntryBySlug("pages", "blog");
 const frontmatter = page.data as LayoutProps;
 const pagination = Astro.props.page;
 const { data: posts } = pagination;
-console.log(posts.length)
 ---
 
 <Layout {...frontmatter}>

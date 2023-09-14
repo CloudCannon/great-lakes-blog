@@ -39,12 +39,15 @@ const posts = await getCollection("blog");
   <main>
     <section>
       <div>
+        <a class="inline-flex items-center py-5 hover:text-[#034AD8]" href="/blog/">
+          <i class="ph-arrow-left mr-2 text-xl" ></i>
+          <span class="hover:underline hover:underline-offset-4">Back</span>
+        </a>
         <article>
           <div>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">{title}</h1>
             <div>
               <ul class="flex flex-col justify-between sm:flex-row sm:justify-start sm:gap-5 py-5 font-light text-sm">
-
                   <li class="post-data-list-item">
                     <p>{author}</p>
                   </li>
