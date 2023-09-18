@@ -4,7 +4,7 @@ title: 7 things you didn't know about email
 tags:
   - marketing
   - blog
-author: Miyah Kelley
+author: Coen Simmons
 thumb_image:
   image: /images/blog/blog-thumb-5.jpg
   image_alt: Group of people discussing something shwon on a laptop

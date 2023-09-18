@@ -4,7 +4,7 @@ title: How to host better email marketing campaigns?
 tags:
   - marketing
   - blog
-author: Arther Conal
+author: Elize Shwartz
 thumb_image:
   image: /images/blog/blog-thumb-2.jpg
   image_alt: People conversing

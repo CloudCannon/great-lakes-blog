@@ -4,7 +4,7 @@ title: Best email sending services
 tags:
   - technology
   - blog
-author: Wendy Parkes
+author: Coen Simmons
 thumb_image:
   image: /images/blog/blog-thumb-3.jpg
   image_alt: Staff meeting

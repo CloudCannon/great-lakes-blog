@@ -4,7 +4,7 @@ title: 5 things to improve your email templates
 tags:
   - marketing
   - blog
-author: Aaron Britt
+author: Coen Simmons
 thumb_image:
   image: /images/blog/blog-thumb-6.jpg
   image_alt: People working on laptops and looking at charts

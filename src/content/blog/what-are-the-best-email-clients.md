@@ -4,7 +4,7 @@ title: What are the best email clients?
 tags:
   - marketing
   - blog
-author: Wendy Parkes
+author: Fran Figureson
 thumb_image:
   image: /images/blog/blog-thumb-4.jpg
   image_alt: Group of people working

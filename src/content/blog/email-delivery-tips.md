@@ -4,7 +4,7 @@ title: Email delivery tips
 tags:
   - email
   - blog
-author: Gerard Hopper
+author: Elize Shwartz
 thumb_image:
   image: /images/blog/blog-thumb-1.jpg
   image_alt: Arial shot of people working

@@ -48,20 +48,21 @@ const posts = await getCollection("blog");
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">{title}</h1>
             <div>
               <ul class="flex flex-col justify-between sm:flex-row sm:justify-start sm:gap-5 py-5 font-light text-sm">
-                  <li class="post-data-list-item">
-                    <p>{author}</p>
-                  </li>
-                  <li class="post-data-list-item">
-                    <p>
-                      {
-                        date.toLocaleDateString(undefined, {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })
-                      }
-                    </p>
-                  </li>
+                <!-- TODO: Get authors working like tags and slugify author  -->
+                <li class="post-data-list-item hover:text-[#034AD8] hover:underline hover:underline-offset-4">
+                  <a href=`/${author}`>{author}</a>
+                </li>
+                <li class="post-data-list-item">
+                  <p>
+                    {
+                      date.toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })
+                    }
+                  </p>
+                </li>
                 <div class="flex gap-3">
                   <li class="post-data-list-item post-size">
                     <p>{wordCount}<span> words</span></p>
