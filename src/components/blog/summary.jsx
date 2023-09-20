@@ -1,6 +1,6 @@
 export default function PostSummary({ post }) {
   const {
-    data: { thumb_image, title, author, date },
+    data: { thumb_image, title, author, date, tags },
     slug,
   } = post;
   return (
@@ -15,6 +15,13 @@ export default function PostSummary({ post }) {
               loading="lazy"
             />
           </a>
+          <div className="blog-post-tag">
+            {tags.slice(0, 2).map((tag, i) => (
+              <a href={`/tags/${tag.toLowerCase()}`} key={i}>
+                {tag[0].toUpperCase() + tag.slice(1)}
+              </a>
+            ))}
+          </div>
           <a className="flex flex-col justify-start mt-2 max-w-[500px]" href={`/blog/${slug}`}>
             <p className="text-2xl font-semibold">
               {title}
