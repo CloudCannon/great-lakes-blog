@@ -1,7 +1,7 @@
 const fs = require('fs');
 const YAML = require('json-to-pretty-yaml');
 
-const collection = 'blog'
+const collection = 'posts'
 
 // Get all the files in the collections folder
 fs.readdir(`./src/content/${collection}`, 'utf8', function(err, files){
