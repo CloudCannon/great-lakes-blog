@@ -1,13 +1,13 @@
 #!/bin/bash
 
-rm -rf src/content/posts
+rm -rf src/content/blog
 rm -rf data/profiles.json
 touch data/profiles.json
 cd src/content
-mkdir posts
-cd posts
+mkdir blog
+cd blog
 git clone https://github.com/CloudCannon/great-lakes-data.git
-mv great-lakes-data/content/posts/* .
+mv great-lakes-data/content/blog/* .
 mkdir ../../../data/temp-profiles
 mv great-lakes-data/content/profiles/* ../../../data/temp-profiles
 rm -rf great-lakes-data
