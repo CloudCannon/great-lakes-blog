@@ -8,6 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "prebuild:format-collection": "node format-collection.cjs",
+    "prebuild:format-data-collection": "node format-data-collection.cjs",
     "prebuild:fetch-theme-color": "node fetch-theme-color.cjs"
   },
   "dependencies": {
