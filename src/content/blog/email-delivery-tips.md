@@ -1,5 +1,5 @@
 ---
-date: 2022-03-10T00:00:00Z
+date: "2022-03-10T00:00:00Z"
 title: Email delivery tips
 tags:
   - email

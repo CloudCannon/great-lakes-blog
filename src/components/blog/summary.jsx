@@ -3,6 +3,8 @@ export default function PostSummary({ post }) {
     data: { thumb_image, title, author, date, tags },
     slug,
   } = post;
+
+  const dateObj = new Date(date);
   return (
     <>
       <div className="flex justify-center">
@@ -31,7 +33,7 @@ export default function PostSummary({ post }) {
             </p>
             <p className="font-light">
               {
-                date.toLocaleDateString(undefined, {
+                dateObj.toLocaleDateString(undefined, {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
