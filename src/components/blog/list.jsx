@@ -6,8 +6,7 @@ export default function BlogList({posts, page}) {
     title = page.title
   } else {
     title = page.data.title
-  }
-  console.log(title)
+  };
   if (posts.length > 0 && page.slug === "index") {
     return (
       <section>
@@ -32,6 +31,6 @@ export default function BlogList({posts, page}) {
           </div>
       </section>
     );
-  }
+  };
   return;
 }
