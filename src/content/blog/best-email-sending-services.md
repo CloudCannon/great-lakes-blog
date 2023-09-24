@@ -1,23 +1,24 @@
 ---
-date: "2022-03-11T00:00:00Z"
-title: Best email sending services
+date: "2022-03-11T00:00:00.000Z"
+title: "Best email sending services"
+slug: "best-email-sending-services"
 tags:
-  - technology
-  - blog
-author: Coen Simmons
+  - "technology"
+  - "blog"
+author: "Coen Simmons"
 thumb_image:
-  image: /images/blog/blog-thumb-3.jpg
-  image_alt: Staff meeting
+  image: "/images/blog/blog-thumb-3.jpg"
+  image_alt: "Staff meeting"
 featured_image:
-  image: /images/blog/featured-image-5.jpg
-  image_alt: Laptop, phone and coffee
+  image: "/images/blog/featured-image-5.jpg"
+  image_alt: "Laptop, phone and coffee"
 seo:
-  page_description:
-  canonical_url:
-  featured_image: /images/blog/featured-image-5.jpg
-  featured_image_alt:
-  author_twitter_handle:
-  open_graph_type: article
+  page_description: null
+  canonical_url: null
+  featured_image: "/images/blog/featured-image-5.jpg"
+  featured_image_alt: null
+  author_twitter_handle: null
+  open_graph_type: "article"
   no_index: false
 ---
 

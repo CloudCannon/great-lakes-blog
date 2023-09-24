@@ -1,23 +1,24 @@
 ---
-date: "2022-03-10T00:00:00Z"
-title: Email delivery tips
+date: "2022-04-14T00:00:00.000Z"
+title: "7 things you didn't know about email"
+slug: "7-things-you-didn't-know-about-email"
 tags:
-  - email
-  - blog
-author: Elize Shwartz
+  - "marketing"
+  - "blog"
+author: "Coen Simmons"
 thumb_image:
-  image: /images/blog/blog-thumb-1.jpg
-  image_alt: Arial shot of people working
+  image: "/images/blog/blog-thumb-5.jpg"
+  image_alt: "Group of people discussing something shwon on a laptop"
 featured_image:
-  image: /images/blog/featured-image.jpg
-  image_alt: Child using a computer
+  image: "/images/blog/featured-image-3.jpg"
+  image_alt: "Person drinking coffee"
 seo:
-  page_description:
-  canonical_url:
-  featured_image: /images/blog/featured-image.jpg
-  featured_image_alt:
-  author_twitter_handle:
-  open_graph_type: article
+  page_description: null
+  canonical_url: null
+  featured_image: "/images/blog/featured-image-3.jpg"
+  featured_image_alt: null
+  author_twitter_handle: null
+  open_graph_type: "article"
   no_index: false
 ---
 
