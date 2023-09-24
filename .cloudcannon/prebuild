@@ -1,28 +1,36 @@
 #!/bin/bash
 # TODO: Set as CLOUDCANNON_ENV_SOMETHING or this local value
-# TODO: Set collections as an array as well
-COLLECTION='blog'
+# TODO: Handle case where CC sends a string rather than an array
+COLLECTION=('blog' 'profiles')
 DATA_FILE=('profiles' 'locations')
 ARRAY_LENGTH=${#DATA_FILE[@]}
 
-# Clean old collection and data files
-rm -rf src/content/${COLLECTION}
+# Clone the lake
+# TODO: Set auth with env variables
+git clone https://github.com/CloudCannon/great-lakes-data.git
+# Clean old collections
+for element in "${COLLECTION[@]}"
+do
+  rm -rf src/content/${element}
+done
+# Clean old data files
 for element in "${DATA_FILE[@]}"
 do
   rm -rf data/${element}.json
   touch data/${element}.json
 done
-# Create new collections
+# Create new collections and move them to their new home
 cd src/content
-mkdir ${COLLECTION}
-cd ${COLLECTION}
-# Clone and move data
-git clone https://github.com/CloudCannon/great-lakes-data.git
-mv great-lakes-data/content/${COLLECTION}/* .
+for element in "${COLLECTION[@]}"
+do
+  mkdir ${element}
+  cp ../../great-lakes-data/content/${element}/* ./${element}
+done
+cd ../../
 for element in "${DATA_FILE[@]}"
 do
-  mkdir ../../../data/temp-${element}
-  mv great-lakes-data/content/${element}/* ../../../data/temp-${element}
+  mkdir data/temp-${element}
+  cp ./great-lakes-data/content/${element}/* ./data/temp-${element}
 done
 # Clean up cloned file
 rm -rf great-lakes-data
@@ -32,7 +40,7 @@ npm run prebuild:format-data-collection
 # Clean up data files
 for element in "${DATA_FILE[@]}"
 do
-  rm -rf ../../../data/temp-${element}
+  rm -rf data/temp-${element}
 done
 # Update color variables to match variables data file
 npm run prebuild:fetch-theme-color
