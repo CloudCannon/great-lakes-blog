@@ -1,17 +1,38 @@
 #!/bin/bash
+# TODO: Set as CLOUDCANNON_ENV_SOMETHING or this local value
+# TODO: Set collections as an array as well
+COLLECTION='blog'
+DATA_FILE=('profiles' 'locations')
+ARRAY_LENGTH=${#DATA_FILE[@]}
 
-rm -rf src/content/blog
-rm -rf data/profiles.json
-touch data/profiles.json
+# Clean old collection and data files
+rm -rf src/content/${COLLECTION}
+for element in "${DATA_FILE[@]}"
+do
+  rm -rf data/${element}.json
+  touch data/${element}.json
+done
+# Create new collections
 cd src/content
-mkdir blog
-cd blog
+mkdir ${COLLECTION}
+cd ${COLLECTION}
+# Clone and move data
 git clone https://github.com/CloudCannon/great-lakes-data.git
-mv great-lakes-data/content/blog/* .
-mkdir ../../../data/temp-profiles
-mv great-lakes-data/content/profiles/* ../../../data/temp-profiles
+mv great-lakes-data/content/${COLLECTION}/* .
+for element in "${DATA_FILE[@]}"
+do
+  mkdir ../../../data/temp-${element}
+  mv great-lakes-data/content/${element}/* ../../../data/temp-${element}
+done
+# Clean up cloned file
 rm -rf great-lakes-data
+# Run formatters
 npm run prebuild:format-collection
 npm run prebuild:format-data-collection
-rm -rf ../../../data/temp-profiles
+# Clean up data files
+for element in "${DATA_FILE[@]}"
+do
+  rm -rf ../../../data/temp-${element}
+done
+# Update color variables to match variables data file
 npm run prebuild:fetch-theme-color

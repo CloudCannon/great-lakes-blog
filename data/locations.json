@@ -1,0 +1,102 @@
+[
+{
+  "title": "Baker College",
+  "city": "Dunedin",
+  "country": "USA",
+  "courses": [
+    "French",
+    "Cognitive Sciences",
+    "Environmental Analysis",
+    "Biochemistry"
+  ],
+  "image": "/images/locations/baker-college.jpeg",
+  "image_alt": "Baker College",
+  "logo_image": "/images/locations/baker-crest.png",
+  "seo": {
+    "page_description": "We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy.",
+    "canonical_url": null,
+    "featured_image": "/images/locations/baker-college.jpeg",
+    "featured_image_alt": null,
+    "author_twitter_handle": null,
+    "open_graph_type": "website",
+    "no_index": false
+  },
+  "content_markdown": "Baker was established as one of the four original residential colleges at Rice in the fall of 1957. It was named in honor of Captain James Addison Baker (1857-1941) who served as the Rice Institute's first Chairman of the Board of Trustees from June 24, 1891, until his death."
+}
+,
+{
+  "title": "Hanszen College",
+  "city": "Batman",
+  "country": "USA",
+  "courses": [
+    "Environmental Analysis",
+    "Biochemistry",
+    "French",
+    "Cognitive Sciences"
+  ],
+  "image": "/images/locations/hanszen-college.jpeg",
+  "image_alt": "Hanszen College",
+  "logo_image": "/images/locations/hanszen-crest.png",
+  "seo": {
+    "page_description": "We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy.",
+    "canonical_url": null,
+    "featured_image": "/images/locations/hanszen-college.jpeg",
+    "featured_image_alt": null,
+    "author_twitter_handle": null,
+    "open_graph_type": "website",
+    "no_index": false
+  },
+  "content_markdown": "In 1957, Rice's second president William V. Houston initiated the college system. Hanszen College was created the same year along with Baker, Will Rice, and Wiess, with all four being male-only. The college took its name in honor of Harry Clay Hanszen, a Houston oil magnate and member of the Rice University Board of Governors from 1946-1950. An existing dorm called South Hall, along with a new dorm completed in 1957, became Hanszen's Old Section and New Section, respectively.\n\n# A new heading\n\nThis is another paragraph.\n\nAnd heres a new line after some whitespace.\n\n## This is a subheading\n\nHere is another paragraph."
+}
+,
+{
+  "title": "Jones College",
+  "city": "Houston",
+  "country": "USA",
+  "courses": [
+    "French",
+    "Cognitive Sciences",
+    "Environmental Analysis",
+    "Biochemistry"
+  ],
+  "image": "/images/locations/jones-college.jpeg",
+  "image_alt": "Jones College",
+  "logo_image": "/images/locations/jones-college-crest.png",
+  "seo": {
+    "page_description": "We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy.",
+    "canonical_url": null,
+    "featured_image": "/images/locations/jones-college.jpeg",
+    "featured_image_alt": null,
+    "author_twitter_handle": null,
+    "open_graph_type": "website",
+    "no_index": false
+},
+  "content_markdown":
+    "Jones college was built as the first womens dormitory at Rice University. The building was made possible because of a $1 million donation from Houston philanthropist Jesse H. Jones. The college was name in honor of his wife, Mary Gibbs Jones. Jones College, which consisted of two buildings - Jones North and Jones South - opened to the first female residents in September 1957."
+},
+{
+  "title": "Will Rice College",
+  "city": "Changed",
+  "country": "USA",
+  "courses": [
+    "Chemical Physics",
+    "Pre-Med ",
+    "French",
+    "Cognitive Sciences"
+  ],
+  "image": "/images/locations/will-rice-college.jpeg",
+  "image_alt": "Will Rice College",
+  "logo_image": "/images/locations/will-rice-crest.png",
+  "seo": {
+    "page_description": "We believe that a good email marketing strategy is the key to growth. So we’re helping you grow your business with tools and resources that make email marketing easy.",
+    "canonical_url": null,
+    "featured_image": "/images/locations/will-rice-college.jpeg",
+    "featured_image_alt": null,
+    "author_twitter_handle": null,
+    "open_graph_type": "website",
+    "no_index": false
+  },
+  "content_markdown": "If you take a little wander through South Campus, you’ll come across a college that shines like the pyre of a thousand phoenixes, illuminated by myth, power, and value. Congratulations, you are now a part of the rust and gold glory that is Will Rice College, the second college founded at Rice University! You may first notice that we have a dazzling outdoor quad flanked on three sides by our spectacular New Dorm, our stunningly historic Old Dorm, and the coziest commons on campus. It is inside, though, that you will truly get to experience the welcoming and warm spirit of your new Will Rice family."
+}
+
+]
