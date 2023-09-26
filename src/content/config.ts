@@ -18,14 +18,10 @@ const blogCollection = defineCollection({
     title: z.string(),
     tags: z.array(z.string()),
     author: z.string(),
-    thumb_image: z.object({
-      image: z.string(),
-      image_alt: z.string(),
-    }),
-    featured_image: z.object({
-      image: z.string(),
-      image_alt: z.string(),
-    }),
+    thumb_image_path: z.string(),
+    thumb_image_alt: z.string(),
+    image: z.string(),
+    image_alt: z.string(),
     seo: seoSchema,
   }),
 });

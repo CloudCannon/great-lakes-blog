@@ -27,7 +27,7 @@ type Props =
     }>;
 
 const props = Astro.props.frontmatter ?? Astro.props;
-const { title, date, featured_image, author } = props;
+const { title, date, image, image_alt, author } = props;
 const content = Astro.props.body ?? Astro.props.rawContent();
 const wordCount = content.split(" ").length;
 const readingTime = Math.floor(wordCount / 183);
@@ -78,8 +78,8 @@ const posts = await getCollection("blog");
           <div class="">
             <img
               class="rounded-lg"
-              src={featured_image.image}
-              alt={featured_image.image_alt}
+              src={image}
+              alt={image_alt}
             />
           </div>
           <div class="mx-auto my-16 max-w-[900px] font-light leading-6">

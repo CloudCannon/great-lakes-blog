@@ -1,59 +1,39 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const YAML = require('json-to-pretty-yaml');
 
 // TODO: Get from env
 const collections = ['blog', 'profiles'];
 
-for (let i = 0; i < collections.length; i++) {
-  const collection = collections[i];
-  // Get all the files in the collections folder
-  fs.readdir(`./src/content/${collection}`, 'utf8', function(err, files){
-    
-    if(err){
-      console.log(err);
-      return;
-    }
-  
-    console.log(`📝 Formatting ${collection} collection now...`)
-    // Loop through all the files in the collection folder
-    for (let j = 0; j < files.length; j++) {
-      const fileName = files[j];
-  
-      fs.readFile(`./src/content/${collection}/${fileName}`, 'utf8', function(err, dataFile){
-        
-        if(err){
-          console.log(err);
-          return;
-        }
-        
+(async () =>
+  Promise.all(
+    collections.map(async (collectionName) => {
+      console.log(`📝 Formatting ${collectionName} data files now...`);
+      const collectionDir = `./src/content/${collectionName}`;
+      const files = await fs.readdir(collectionDir);
+
+      await Promise.all(files.map(async (filename) => {
         // Parse the filename
-        const mdName = fileName.replace(/json/g, 'md');
-        const parsedName = mdName.replace(/_/g, '-');
-        var newFilePath = `./src/content/${collection}/${parsedName}`
+        const originalFilepath = `${collectionDir}/${filename}`;
+        const markdownFilename = filename.replace(/json/g, 'md').replace(/_/g, '-');
+        const markdownFilepath = `${collectionDir}/${markdownFilename}`
   
         // Parse JSON data file and turn the front matter into formatted yaml
-        const jsonObj = JSON.parse(dataFile)
+        const contents = await fs.readFile(originalFilepath);
+        const jsonObj = JSON.parse(contents.toString('utf8'))
         const { content_markdown, ...frontMatterData } = jsonObj;
-        const frontMatter = "---\n" + YAML.stringify(frontMatterData) + "---\n";
   
         // Add the markdown content underneath the formatted yaml
-        const totalPage = frontMatter + "\n" + content_markdown;
+        const totalPage = [
+          '---',
+          YAML.stringify(frontMatterData),
+          '---',
+          content_markdown
+        ].join('\n');
         
         // Create new markdown file
-        fs.writeFile(newFilePath, totalPage, function (err) {
-          if (err) throw err;
-          console.log(`${parsedName} is created successfully.`);
-        });
-      });
-  
-      // Delete old JSON file
-      fs.unlink(`./src/content/${collection}/` + fileName, (err) => {
-        if (err) {
-            throw err;
-        }
-        console.log(`Delete ${fileName} successfully.`);
-      }); 
-    }
-  });
-}
+        await fs.writeFile(markdownFilepath, totalPage)
+        return fs.unlink(originalFilepath, totalPage);
+      }));
+    })
+  ))();
 

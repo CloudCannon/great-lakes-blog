@@ -1,17 +1,14 @@
 ---
 date: "2022-03-11T00:00:00.000Z"
 title: "Best email sending services"
-slug: "best-email-sending-services"
 tags:
   - "technology"
   - "blog"
 author: "Coen Simmons"
-thumb_image:
-  image: "/images/blog/blog-thumb-3.jpg"
-  image_alt: "Staff meeting"
-featured_image:
-  image: "/images/blog/featured-image-5.jpg"
-  image_alt: "Laptop, phone and coffee"
+thumb_image_path: "/images/blog/blog-thumb-3.jpg"
+thumb_image_alt: "Staff meeting"
+image: "/images/blog/featured-image-5.jpg"
+image_alt: "Laptop, phone and coffee"
 seo:
   page_description: null
   canonical_url: null
@@ -20,8 +17,8 @@ seo:
   author_twitter_handle: null
   open_graph_type: "article"
   no_index: false
----
 
+---
 When you send an email campaign, you expect it to reach your readers, right? But what if the emails go straight to your subscribers' spam folders instead of their inboxes? To make sure your emails reach their recipients successfully, follow these email delivery tips.
 
 ### Use an ESP

@@ -1,44 +1,23 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
 // TODO: Get dataCollections as an env
-const dataCollections = ['profiles', 'locations']
+const collections = ['profiles', 'locations'];
+(async () =>
+  Promise.all(
+    collections.map(async (collectionName) => {
+      console.log(`📝 Formatting ${collectionName} data files now...`);
+      const collectionDir = `./data/temp-${collectionName}`;
+      const files = await fs.readdir(collectionDir);
 
-for (let i = 0; i < dataCollections.length; i++) {
-  const dataCollection = dataCollections[i];
-  console.log(`📝 Formatting ${dataCollection} data files now...`)
-  
-  // Get all the files in the locations folder
-  const files = fs.readdirSync(`./data/temp-${dataCollection}`, 'utf8', function(err, files){
-    
-    if(err){
-      console.log(err);
-      return;
-    }
-  
-    return files;
-  });
-  
-  // Write multiple json files to one file
-  for (let j = 0; j < files.length; j++) {
-    const fileName = files[j];
-    const filePath = `./data/temp-${dataCollection}/${fileName}`;
-    const destPath = `./data/${dataCollection}.json`;
-    
-    const data = fs.readFileSync( filePath )
-    const file = JSON.parse(data);
-  
-    let formattedFile = `${data},\n`
-    if (j === 0) {
-      formattedFile = `[\n${data},\n`
-    }
-    if (j === files.length - 1) {
-      formattedFile = `${data}\n]`
-    }
-  
-    console.log(`Writing ${fileName} to ${destPath}`)
-    fs.appendFileSync(destPath, formattedFile, { encoding: "utf8" })
-  };
-  
-}
+      const items = await Promise.all(files.map(async (fileName) => {
+        const contents = await fs.readFile(`${collectionDir}/${fileName}`);
+        return JSON.parse(contents.toString('utf8'));
+      }));
 
-
+      const destPath = `./data/${collectionName}.json`;
+      console.log(`Writing to ${destPath}`);
+      return fs.writeFile(destPath, JSON.stringify(items, null, '\t'), {
+        encoding: 'utf8',
+      });
+    })
+  ))();

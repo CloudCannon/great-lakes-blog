@@ -1,6 +1,6 @@
 export default function PostSummary({ post }) {
   const {
-    data: { thumb_image, title, author, date, tags },
+    data: { thumb_image_path, thumb_image_alt, title, author, date, tags },
     slug,
   } = post;
 
@@ -12,8 +12,8 @@ export default function PostSummary({ post }) {
           <a href={`/blog/${slug}`}>
             <img
               className="rounded-lg"
-              src={thumb_image.image}
-              alt={thumb_image.image_alt}
+              src={thumb_image_path}
+              alt={thumb_image_alt}
               loading="lazy"
             />
           </a>
