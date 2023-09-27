@@ -50,7 +50,7 @@ const posts = await getCollection("blog");
               <ul class="flex flex-col justify-between sm:flex-row sm:justify-start sm:gap-5 py-5 font-light text-sm">
                 <!-- TODO: Get authors working like tags and slugify author  -->
                 <li class="post-data-list-item hover:text-[#034AD8] hover:underline hover:underline-offset-4">
-                  <a href={url}>{author}</a>
+                  <a href={authorUrl}>{author}</a>
                 </li>
                 <li class="post-data-list-item">
                   <p>
