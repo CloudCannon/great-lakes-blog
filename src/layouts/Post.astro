@@ -28,9 +28,9 @@ const content = Astro.props.body ?? Astro.props.rawContent();
 const wordCount = content.split(" ").length;
 const readingTime = Math.floor(wordCount / 183);
 const dateObj = new Date(date);
-const authorDomain = "https://wise-wombat.cloudvent.net/authors/"
+const authorDomain = "https://wise-wombat.cloudvent.net/profiles/"
 const authorSlug = author.toLowerCase().replace(/ /g, "-");
-const authorUrl = [authorDomain, authorSlug, "/"].join();
+const authorUrl = [authorDomain, authorSlug, "/"].join('');
 
 const posts = await getCollection("blog");
 ---
