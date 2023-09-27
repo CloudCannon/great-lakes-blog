@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+data/profiles.json
+src/content/blog/
+great-lakes-data

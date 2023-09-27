@@ -1,46 +1,15 @@
 #!/bin/bash
-# TODO: Set as CLOUDCANNON_ENV_SOMETHING or this local value
-# TODO: Handle case where CC sends a string rather than an array
-COLLECTION=('blog' 'profiles')
-DATA_FILE=('profiles' 'locations')
-ARRAY_LENGTH=${#DATA_FILE[@]}
+
+set -e
 
 # Clone the lake
-# TODO: Set auth with env variables
 git clone https://github.com/CloudCannon/great-lakes-data.git
-# Clean old collections
-for element in "${COLLECTION[@]}"
-do
-  rm -rf src/content/${element}
-done
-# Clean old data files
-for element in "${DATA_FILE[@]}"
-do
-  rm -rf data/${element}.json
-  touch data/${element}.json
-done
-# Create new collections and move them to their new home
-cd src/content
-for element in "${COLLECTION[@]}"
-do
-  mkdir ${element}
-  cp ../../great-lakes-data/content/${element}/* ./${element}
-done
-cd ../../
-for element in "${DATA_FILE[@]}"
-do
-  mkdir data/temp-${element}
-  cp ./great-lakes-data/content/${element}/* ./data/temp-${element}
-done
-# Clean up cloned file
+
+node great-lakes-data/format-collection.cjs blog
+
+node great-lakes-data/format-data-file.cjs profiles
+
 rm -rf great-lakes-data
-# Run formatters
-npm run prebuild:format-collection
-npm run prebuild:format-data-collection
-# Clean up data files
-for element in "${DATA_FILE[@]}"
-do
-  rm -rf data/temp-${element}
-done
+
 # Update color variables to match variables data file
 npm run prebuild:fetch-theme-color
