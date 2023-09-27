@@ -44,6 +44,13 @@ collections_config:
       - visual
     filter:
       base: strict
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Data
+    collections:
+      - data
 _inputs:
   layout:
     hidden: true
