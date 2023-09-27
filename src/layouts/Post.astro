@@ -28,6 +28,9 @@ const content = Astro.props.body ?? Astro.props.rawContent();
 const wordCount = content.split(" ").length;
 const readingTime = Math.floor(wordCount / 183);
 const dateObj = new Date(date);
+const authorDomain = "https://wise-wombat.cloudvent.net/authors/"
+const authorSlug = author.toLowerCase().replace(/ /g, "-");
+const authorUrl = [authorDomain, authorSlug, "/"].join();
 
 const posts = await getCollection("blog");
 ---
@@ -47,7 +50,7 @@ const posts = await getCollection("blog");
               <ul class="flex flex-col justify-between sm:flex-row sm:justify-start sm:gap-5 py-5 font-light text-sm">
                 <!-- TODO: Get authors working like tags and slugify author  -->
                 <li class="post-data-list-item hover:text-[#034AD8] hover:underline hover:underline-offset-4">
-                  <a href=`/${author}`>{author}</a>
+                  <a href={url}>{author}</a>
                 </li>
                 <li class="post-data-list-item">
                   <p>
