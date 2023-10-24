@@ -1,6 +1,6 @@
 ---
 _schema: default
-date: 2023-10-24T20:50:13Z
+date: "2023-10-24T20:50:13Z"
 title: Site mounting
 tags:
   - blog
