@@ -1,14 +1,14 @@
 ---
-import Layout from "./Layout.astro";
-import PostSummary from "../components/blog/summary";
-import { getCollection } from "astro:content";
-import type { MarkdownLayoutProps } from "astro";
+import Layout from './Layout.astro';
+import PostSummary from '../components/blog/summary';
+import { getCollection } from 'astro:content';
+import type { MarkdownLayoutProps } from 'astro';
 import '../styles/main.scss';
 
 type Props =
   | {
       title: string;
-      date: string;
+      date: Date;
       image: string;
       image_alt: string;
       author: string;
@@ -16,7 +16,7 @@ type Props =
     }
   | MarkdownLayoutProps<{
       title: string;
-      date: string;
+      date: Date;
       image: string;
       image_alt: string;
       author: string;
@@ -25,40 +25,51 @@ type Props =
 const props = Astro.props.frontmatter ?? Astro.props;
 const { title, date, image, image_alt, author } = props;
 const content = Astro.props.body ?? Astro.props.rawContent();
-const wordCount = content.split(" ").length;
+const wordCount = content.split(' ').length;
 const readingTime = Math.floor(wordCount / 183);
 const dateObj = new Date(date);
-const authorDomain = "https://simple-onion.cloudvent.net/profiles/"
-const authorSlug = author.toLowerCase().replace(/ /g, "-");
-const authorUrl = [authorDomain, authorSlug, "/"].join('');
+const authorDomain = 'https://simple-onion.cloudvent.net/profiles/';
+const authorSlug = author.toLowerCase().replace(/ /g, '-');
+const authorUrl = [authorDomain, authorSlug, '/'].join('');
 
-const posts = await getCollection("blog");
+const posts = await getCollection('blog');
 ---
 
 <Layout {...props}>
   <main>
     <section>
       <div>
-        <a class="inline-flex items-center py-5 hover:text-[#034AD8]" href="/blog/">
-          <i class="ph-arrow-left mr-2 text-xl" ></i>
+        <a
+          class="inline-flex items-center py-5 hover:text-[#034AD8]"
+          href="/blog/"
+        >
+          <i class="ph-arrow-left mr-2 text-xl"></i>
           <span class="hover:underline hover:underline-offset-4">Back</span>
         </a>
         <article>
           <div>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">{title}</h1>
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold"
+            >
+              {title}
+            </h1>
             <div>
-              <ul class="flex flex-col justify-between sm:flex-row sm:justify-start sm:gap-5 py-5 font-light text-sm">
+              <ul
+                class="flex flex-col justify-between sm:flex-row sm:justify-start sm:gap-5 py-5 font-light text-sm"
+              >
                 <!-- TODO: Get authors working like tags and slugify author  -->
-                <li class="post-data-list-item hover:text-[#034AD8] hover:underline hover:underline-offset-4">
+                <li
+                  class="post-data-list-item hover:text-[#034AD8] hover:underline hover:underline-offset-4"
+                >
                   <a href={authorUrl}>{author}</a>
                 </li>
                 <li class="post-data-list-item">
                   <p>
                     {
                       dateObj.toLocaleDateString(undefined, {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
                       })
                     }
                   </p>
@@ -67,7 +78,7 @@ const posts = await getCollection("blog");
                   <li class="post-data-list-item post-size">
                     <p>{wordCount}<span> words</span></p>
                   </li>
-                  <li >
+                  <li>
                     <p>{readingTime}<span> minutes</span></p>
                   </li>
                 </div>
@@ -75,11 +86,7 @@ const posts = await getCollection("blog");
             </div>
           </div>
           <div class="">
-            <img
-              class="rounded-lg"
-              src={image}
-              alt={image_alt}
-            />
+            <img class="rounded-lg" src={image} alt={image_alt} />
           </div>
           <div class="mx-auto my-16 max-w-[900px] font-light leading-6">
             <slot />
@@ -110,14 +117,14 @@ const posts = await getCollection("blog");
     height: 15px;
     top: 50%;
     right: -10%;
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%);
   }
 
   @media (min-width: 640px) {
     .post-data-list-item {
       position: relative;
     }
-    
+
     .post-data-list-item::after {
       position: absolute;
       content: '';
@@ -126,8 +133,7 @@ const posts = await getCollection("blog");
       height: 15px;
       top: 50%;
       right: -12%;
-      transform: translate(-50%,-50%)
+      transform: translate(-50%, -50%);
     }
-	}
+  }
 </style>
-
