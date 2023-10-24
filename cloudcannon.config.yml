@@ -7,10 +7,10 @@ collections_config:
     path: data
     disable_add: true
     disable_add_folder: true
-  posts:
+  news:
     path: src/content/blog
     output: true
-    url: "/blog/[slug]/"
+    url: '/blog/[slug]/'
     _enabled_editors:
       - content
       - visual
@@ -37,7 +37,7 @@ collections_config:
         empty_type: array
   pages:
     path: src/content/pages
-    url: "/[slug]/"
+    url: '/[slug]/'
     output: true
     icon: wysiwyg
     _enabled_editors:
@@ -48,6 +48,9 @@ collection_groups:
   - heading: Pages
     collections:
       - pages
+  - heading: News
+    collections:
+      - news
   - heading: Data
     collections:
       - data
