@@ -7,11 +7,11 @@ rm -rf great-lakes-data
 git clone https://github.com/CloudCannon/great-lakes-data.git
 
 # Move images from lake to site
-rm -rf public/images
-mv great-lakes-data/content/images/ public/
+# rm -rf public/images
+# mv great-lakes-data/content/images/ public/
 
 # Format the files we need
-node great-lakes-data/format-collection.cjs blog
+# node great-lakes-data/format-collection.cjs blog
 
 node great-lakes-data/format-data-file.cjs profiles
 

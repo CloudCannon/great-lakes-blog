@@ -21,6 +21,5 @@ pnpm-debug.log*
 .DS_Store
 
 # Files that get copied from the lake
-public/images
 data/profiles.json
 great-lakes-data
