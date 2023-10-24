@@ -5,7 +5,7 @@ title: Different site mounting
 tags:
   - blog
 author: Test Richardson
-thumb_image_path: /images/blog/blog-thumb-1.jpg
+thumb_image_path: /images/blog/blog-thumb-4.jpg
 thumb_image_alt: Latops
 image: /images/blog/featured-image-4.jpg
 image_alt: Coffee
