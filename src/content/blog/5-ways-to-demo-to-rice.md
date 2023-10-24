@@ -1,24 +1,24 @@
 ---
-date: "2022-06-10T00:00:00.000Z"
-title: "5 ways to demo to Rice"
+date: 2022-06-10T00:00:00.000Z
+title: '5 ways to demo to Rice'
 tags:
-  - "marketing"
-  - "university"
-author: "Test Richardson"
-thumb_image_path: "/images/blog/blog-thumb-6.jpg"
-thumb_image_alt: "People working on laptops and looking at charts"
-image: "/images/blog/featured-image-2.jpg"
-image_alt: "Children looking at a laptop"
+  - 'marketing'
+  - 'university'
+author: 'Test Richardson'
+thumb_image_path: '/images/blog/blog-thumb-6.jpg'
+thumb_image_alt: 'People working on laptops and looking at charts'
+image: '/images/blog/featured-image-2.jpg'
+image_alt: 'Children looking at a laptop'
 seo:
-  page_description: ""
-  canonical_url: ""
-  featured_image: "/images/blog/featured-image-2.jpg"
-  featured_image_alt: ""
-  author_twitter_handle: ""
-  open_graph_type: "article"
+  page_description: ''
+  canonical_url: ''
+  featured_image: '/images/blog/featured-image-2.jpg'
+  featured_image_alt: ''
+  author_twitter_handle: ''
+  open_graph_type: 'article'
   no_index: false
-
 ---
+
 This post has been changed on the LAKE. When you send an email campaign, you expect it to reach your readers, right? But what if the emails go straight to your subscribers' spam folders instead of their inboxes? To make sure your emails reach their recipients successfully, follow these email delivery tips.
 
 ### Use an ESP
