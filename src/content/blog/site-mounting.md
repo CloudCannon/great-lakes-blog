@@ -1,17 +1,15 @@
 ---
 _schema: default
-date: "2023-10-24T20:50:13Z"
+date: 2023-10-24T20:50:13Z
 title: Site mounting
 tags:
   - blog
   - mounting
 author: Test Richardson
-thumb_image:
-  image: /images/blog/blog-thumb-1.jpg
-  image_alt: Laptops on a desk
-featured_image:
-  image: /images/blog/featured-image-6.jpg
-  image_alt: Working at a laptop from a cafe
+thumb_image_path: /images/blog/blog-thumb-1.jpg
+thumb_image_alt: Laptops on a desk
+image: /images/blog/featured-image-6.jpg
+image_alt: Working at a laptop from a cafe
 seo:
   page_description:
   canonical_url:
