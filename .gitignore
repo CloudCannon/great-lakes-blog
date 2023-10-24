@@ -23,5 +23,4 @@ pnpm-debug.log*
 # Files that get copied from the lake
 public/images
 data/profiles.json
-src/content/blog/
 great-lakes-data
