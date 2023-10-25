@@ -18,7 +18,7 @@ if (pageSlug === undefined) {
   pageSlug = 'index';
 }
 const page = await getEntry('pages', pageSlug);
-let posts = await getCollection('engineering');
+let posts = await getCollection('news');
 posts = posts.slice(0, frontmatter.page_size);
 ---
 

@@ -15,7 +15,7 @@ export default function BlogList({ posts, page }) {
             <PostSummary post={post} key={i} />
           ))}
         </div>
-        <a href="/engineering/">
+        <a href="/news/">
           <button className="button-primary rounded-lg">All Posts</button>
         </a>
       </section>

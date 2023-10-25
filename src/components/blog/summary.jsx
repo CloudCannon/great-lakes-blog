@@ -9,7 +9,7 @@ export default function PostSummary({ post }) {
     <>
       <div className="flex justify-center">
         <article className="block">
-          <a href={`/engineering/${slug}`}>
+          <a href={`/news/${slug}`}>
             <img
               className="rounded-lg"
               src={thumb_image_path}
@@ -26,7 +26,7 @@ export default function PostSummary({ post }) {
           </div>
           <a
             className="flex flex-col justify-start mt-2 max-w-[500px]"
-            href={`/engineering/${slug}`}
+            href={`/news/${slug}`}
           >
             <p className="text-2xl font-semibold">{title}</p>
             <p className="font-light">{author}</p>
