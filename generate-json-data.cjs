@@ -3,7 +3,7 @@ const path = require('path');
 const matter = require('gray-matter');
 
 (async () => {
-  const collectionName = 'blog';
+  const collectionName = 'engineering';
 
   if (!collectionName) {
     throw new Error('Please provide the collection name to install');
