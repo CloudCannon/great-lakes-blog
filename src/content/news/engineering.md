@@ -2,7 +2,6 @@
 _schema: default
 date: 2023-10-30T20:23:05Z
 title: Engineering
-slug: engineering
 tags:
   - blog
   - engineering

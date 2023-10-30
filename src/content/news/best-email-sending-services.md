@@ -1,7 +1,6 @@
 ---
 date: 2022-03-11T00:00:00.000Z
 title: 'Best email sending services'
-slug: best-email-sending
 tags:
   - 'technology'
   - 'blog'

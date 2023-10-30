@@ -1,7 +1,6 @@
 ---
 date: 2022-03-09T00:00:00.000Z
 title: 'How to host better email marketing campaigns'
-slug: how-to-host-better-email-campaigns
 tags:
   - 'marketing'
   - 'blog'
