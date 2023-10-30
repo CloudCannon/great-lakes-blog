@@ -1,6 +1,7 @@
 ---
 date: 2022-06-10T00:00:00.000Z
 title: 'What are the best email clients?'
+slug: what-are-the-best-email-clients
 tags:
   - 'marketing'
   - 'blog'

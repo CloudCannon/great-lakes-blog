@@ -1,6 +1,7 @@
 ---
 date: 2022-03-10T00:00:00.000Z
 title: 'Email delivery tips'
+slug: email-delivery-tips
 tags:
   - 'email'
   - 'blog'
