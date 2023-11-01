@@ -34,13 +34,13 @@ collections_config:
         empty_type: string
         type: select
         values: collections.profiles
-        value_key: id
       tags:
         type: multiselect
         allow_create: true
         empty_type: array
   profiles:
     path: src/content/profiles
+    output: true
   pages:
     path: src/content/pages
     url: '/[slug]/'
