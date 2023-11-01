@@ -59,10 +59,6 @@ collection_groups:
     collections:
       - data
 
-data_config:
-  profiles:
-    path: data/profiles
-
 _inputs:
   layout:
     hidden: true
