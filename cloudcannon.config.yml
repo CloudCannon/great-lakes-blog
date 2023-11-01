@@ -2,6 +2,7 @@ paths:
   data: data
   static: public
   uploads: public/images
+
 collections_config:
   data:
     path: data
@@ -31,6 +32,8 @@ collections_config:
         empty_type: string
       author:
         empty_type: string
+        type: select
+        values: collections.profiles
       tags:
         type: multiselect
         allow_create: true
@@ -44,6 +47,7 @@ collections_config:
       - visual
     filter:
       base: strict
+
 collection_groups:
   - heading: Pages
     collections:
@@ -54,6 +58,11 @@ collection_groups:
   - heading: Data
     collections:
       - data
+
+data_config:
+  profiles:
+    path: data/profiles.json
+
 _inputs:
   layout:
     hidden: true
@@ -112,9 +121,5 @@ _inputs:
     comment:
       When selected this removes the page from your sitemap and adds the noindex
       robots meta tag
+
 _structures:
-  features:
-    values:
-      - value:
-          item:
-          isActive:

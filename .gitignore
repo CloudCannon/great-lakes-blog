@@ -19,7 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# Files that get copied from the lake
-data/profiles.json
-great-lakes-data
