@@ -33,7 +33,8 @@ collections_config:
       author:
         empty_type: string
         type: select
-        values: collections.profiles
+        options:
+          values: collections.profiles
       tags:
         type: multiselect
         allow_create: true
