@@ -34,6 +34,7 @@ collections_config:
         empty_type: string
         type: select
         values: collections.profiles
+        value_key: id
       tags:
         type: multiselect
         allow_create: true
