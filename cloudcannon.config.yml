@@ -35,10 +35,10 @@ collections_config:
         type: select
         options:
           values: collections.profiles
-          value_key: id
+          value_key: path
           preview:
             text:
-              - key: id
+              - key: path
 
       tags:
         type: multiselect
