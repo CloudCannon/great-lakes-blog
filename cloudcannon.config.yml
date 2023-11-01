@@ -61,7 +61,7 @@ collection_groups:
 
 data_config:
   profiles:
-    path: data/profiles.json
+    path: data/profiles
 
 _inputs:
   layout:
