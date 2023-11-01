@@ -35,6 +35,11 @@ collections_config:
         type: select
         options:
           values: collections.profiles
+          value_key: id
+          preview:
+            text:
+              - key: id
+
       tags:
         type: multiselect
         allow_create: true
