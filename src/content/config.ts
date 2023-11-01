@@ -50,14 +50,12 @@ const profilesCollection = defineCollection({
     content: z.string().optional(),
     data: z
       .object({
-        date: z.string(),
         title: z.string(),
-        tags: z.array(z.string()),
-        author: z.string(),
-        thumb_image_path: z.string(),
-        thumb_image_alt: z.string(),
+        name: z.string(),
+        designation: z.string(),
         image: z.string(),
         image_alt: z.string(),
+        location: z.string(),
         seo: seoSchema,
       })
       .optional(),
