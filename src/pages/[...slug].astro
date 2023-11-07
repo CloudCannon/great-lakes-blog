@@ -8,8 +8,6 @@ export interface Props {
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages', ({ data }) => !data.hidden);
-  const profiles = await getCollection('profiles');
-  console.log(profiles);
   return pages.map((page) => {
     const slug = page.slug.replace(/index$/, '');
     if (slug.length === 0)
