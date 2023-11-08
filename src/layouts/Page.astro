@@ -23,6 +23,7 @@ posts = posts.slice(0, frontmatter.page_size);
 ---
 
 <Layout {...frontmatter}>
+  <h1>Engineering News</h1>
   <slot />
   <BlogList posts={posts} page={page} />
 </Layout>
